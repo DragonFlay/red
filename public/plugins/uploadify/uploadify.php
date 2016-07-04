@@ -1,48 +1,30 @@
-<?php	
-exit;
-require_once(dirname(__FILE__).'/../../inc/config.inc.php');
-
+<?php
 /*
-**************************
-(C)2010-2013 phpMyWind.com
-update: 2012-9-15 10:50:00
-person: Feng
-**************************
+Uploadify
+Copyright (c) 2012 Reactive Apps, Ronnie Garcia
+Released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
 */
 
+// Define a destination
+$targetFolder = '/uploads'; // Relative to the root
 
-//初始化参数
-$action      = isset($action)      ? $action      : '';
-$iswatermark = isset($iswatermark) ? $iswatermark : '';
-$timestamp   = isset($timestamp)   ? $timestamp   : '';
-$verifyToken = md5('unique_salt'.$timestamp);
-
-
-//判断上传状态
-if(!empty($_FILES) && $token==$verifyToken && isset($sessionid))
-{
-
-	//引入上传类
-	require_once(PHPMYWIND_DATA.'/httpfile/upload.class.php');
-	$upload_info = UploadFile('Filedata', $iswatermark);
-
-
-	/* 返回上传状态，是数组则表示上传成功
-	   非数组则是直接返回发生的问题 */
-	if(!is_array($upload_info))
-		echo '0,'.$upload_info;
-	else
-		echo implode(',', $upload_info);
-
-	exit();
-}
-
-
-//删除元素
-if($action == 'del')
-{
-	$dosql->ExecNoneQuery("DELETE FROM `#@__uploads` WHERE path='$filename'");
-	unlink(PHPMYWIND_ROOT .'/'. $filename);
-	exit();
+//验证表单提交是否合法
+if (!empty($_FILES) && $_POST['token'] == md5('unique_salt' . $_POST['timestamp'])) {
+	//获取提交过来的文件
+	$tempFile = $_FILES['Filedata']['tmp_name'];//~/a.png
+	//组装保存路劲
+	$targetPath = $_SERVER['DOCUMENT_ROOT'] . $targetFolder;
+	$targetFile = rtrim($targetPath,'/') . '/' . $_FILES['Filedata']['name'];//a.png
+	
+	// Validate the file type
+	$fileTypes = array('jpg','jpeg','gif','png'); // File extensions
+	$fileParts = pathinfo($_FILES['Filedata']['name']);
+	
+	if (in_array($fileParts['extension'],$fileTypes)) {
+		move_uploaded_file($tempFile,$targetFile);
+		echo '1';
+	} else {
+		echo 'Invalid file type.';
+	}
 }
 ?>

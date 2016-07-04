@@ -15,9 +15,10 @@ class Admin extends Model implements AuthenticatableContract,
                                     CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword; 
-    protected $table = 'system_module';
+    protected $table = 'admin';
+    public $primaryKey = 'admin_id';
 //   
-//    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['username', 'email', 'password'];
 //
-//    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = ['password', 'remember_token'];
 }

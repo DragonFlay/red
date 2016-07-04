@@ -1,0 +1,212 @@
+*{
+	text-decoration:none;
+}
+#full{
+		/* border:1px solid red; */ 
+		width:1400px;
+		height:800px;
+		background:url('/images/home/user/layout-bg.JPG') no-repeat;
+		
+}
+.yemian{
+		/* border:1px solid red;  */
+		width:80%;
+		height:650px;
+		margin:150px;
+}
+.zuo{
+		/* border:1px solid red;  */
+		width:100px;
+		height:600px;
+		background:white;
+		float:left;
+}
+
+.you{
+		height:600px;
+		width:85%;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you1{
+		height:200px;
+		width:98%;
+		/* border:1px solid blue; */
+		float:left;
+		background:white;
+}
+.you1a{
+		height:150px;
+		width:150px;
+		/* border:1px solid blue; */
+		background:url('/images/home/user/2015-08-18_011618.png') no-repeat;
+		margin:30px;
+		float:left;
+}
+.you1b{
+		height:150px;
+		width:240px;
+		/* border:1px solid blue; */
+		float:left;
+		margin:20px;
+}
+.you1b1{
+		height:50px;
+		width:280px;
+		/* border:1px solid blue; */
+}
+.you1b1a{
+		height:30px;
+		width:120px;
+		/* border:1px solid blue; */
+		font-size:20px;
+		font-weight:bold;
+		float:left;
+		margin:10px;
+}
+
+.you1b1b{
+		height:40px;
+		width:120px;
+	/* 	border:1px solid blue; */
+		float:left;
+}
+.you1b2{
+		height:35px;
+		width:280px;
+		/* border:1px solid blue; */
+}	
+.you1b2a{
+		height:35px;
+		width:150px;
+		/* border:1px solid blue; */
+}	
+.you1c{
+		height:160px;
+		width:150px;
+		/* border:1px solid blue; */
+		float:left;
+		margin-top:20px;
+}
+.you1c1{
+		height:50px;
+		width:150px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you1c2{
+		height:35px;
+		width:150px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you1c3{
+		height:50px;
+		width:150px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you1d{
+		height:150px;
+		width:250px;
+		/* border:1px solid blue; */
+		float:left;
+		margin-top:10px;
+}
+.you1d1{
+		height:50px;
+		width:250px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you1d2{
+		height:60px;
+		width:250px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you2{
+		height:40px;
+		width:98%;
+		/* border:1px solid blue; */
+		float:left;
+		background:#F5F8F9;
+}
+.you2a{
+		height:40px;
+		width:180px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you2b{
+		height:40px;
+		width:180px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you2c{
+		height:40px;
+		width:180px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you2d{
+		height:40px;
+		width:350px;
+		/* border:1px solid blue; */
+		float:left;
+}
+.you3{
+		height:70px;
+		width:98%;
+		/* border:1px solid green; */
+		float:left;
+		margin-top:30px;
+}
+.you3a{
+		height:50px;
+		width:90%;
+		/* border:1px solid red; */
+		float:left;
+}
+.you3a1{
+		height:30px;
+		width:400px;
+		/* border:1px solid blue; */
+		float:left;
+		margin-top:5px;
+		}
+.you4{
+		height:200px;
+		width:100%;
+	/* 	border:1px solid red; */
+		float:left;
+}
+.you4a{
+		height:100px;
+		width:90px;
+		/* border:1px solid red; */
+		float:left;
+}	
+.you4b{
+		height:60px;
+		width:200px;
+		/* border:1px solid red; */
+		float:left;
+		margin-top:20px;
+}
+.you4c{
+		height:60px;
+		width:400px;
+		/* border:1px solid red; */
+		float:left;
+		margin-top:20px;
+}
+.you4d{
+		height:30px;
+		width:100px;
+		/* border:1px solid red; */
+		float:left;
+		margin:30px;
+		margin-left:100px;
+}

@@ -7,7 +7,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Admin\CommonController;
 use Session;
-
+use DB;
+use Laravel\Verify;
 class IndexController extends CommonController {
 
     /**
@@ -16,79 +17,22 @@ class IndexController extends CommonController {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $listModel = new \App\Admin;
-        $list = $listModel->all();
-        return view("admin.index.index",compact("list"));
+        return view("admin.index");
         
     }
     public function login()
     {
-        return view ("admin.admin.login");
+    
     }
-//    public function mod_id($mod_id)
-//    {
-//        $mod = Admin::find($mod_id);
-//        return view("admin.index.index",compact("mod"));
-//    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create() {
-        //
+    public function modMenu($id)
+    {  
+ 
+       
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request) {
-        //
+    public function vertify()
+    {
+      
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id) {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id) {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id) {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id) {
-        //
-    }
-
 }
+
+  

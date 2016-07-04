@@ -1,0 +1,298 @@
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	list-style-type:none;
+}
+.c{
+	clear:both;
+}
+#head_center{
+	height:30px;
+	background:#f5f5f5;
+	margin:-3px auto;
+}
+#h_c_content{
+			width:960px;
+			margin:0 auto;
+}
+#contentl{
+	width:80px;
+	background:#fff;
+	float:left;
+}
+#bj{
+	color:#705555;
+	padding:7px;
+	font-size:12px;
+	float:left;
+}
+#bj-pic{
+	background:url(/images/home/details/1.png) -69px -20px;
+	width:15px;
+	height:30px;
+	float:left;
+	margin-left:17px;
+	margin-left:17px;
+}
+#contentr{
+	width:980px;
+	}
+#contentr ul li{
+	float:right;
+	font-size:12px;
+	padding-left:10px;
+	padding-top:7px;
+}
+#contentr ul li a,span{
+	color:#705555;
+}
+#head_bottom{
+	width:980px;
+	height:80px;
+	margin:0 auto;
+}
+#h_b_left{
+	
+}
+#h_b_right{
+	float:right;
+	position:relative;
+	bottom:-30px;
+	
+}
+#bag{
+	width:37px;
+	height:37px;
+	background:url(/images/home/details/13.png) no-repeat -43px -130px;
+	display:inline-block;
+}
+#shopbag{
+	height:35px;
+	display:inline-block;
+	border:1px solid #f10582;
+	margin-left:10px;
+}
+#shop{
+	margin-top:5px;
+	float:right;
+	margin-right:20px;
+	
+	
+}
+a{
+	color:#f73580;
+}
+#body_head{
+	height:35px;
+	background-color:#f10582;
+	width:100%;
+	/* border:1px solid red; */
+	/* overflow:hidden; */
+}
+#head_left{
+	width:980px;
+	height:35px;
+	margin:0 auto;
+	/* border:1px solid red; */
+	/* overflow:hidden;  */
+}
+#head_left ul li a{
+	float:left;
+	color:#fff;
+	padding-left:20px;
+	font-size:15px;
+	font-weight:bold;
+	/* padding-top:10px; */
+	/* display:inline-block; */
+	/* border:1px solid black; */
+	overflow:hidden; 
+	display:block;
+	line-height:35px;
+}
+#first{
+	background-color:#BD1067;
+	padding-right:10px;
+	/* padding-bottom:0px; */
+}
+/* #baby{
+	position:relative;
+	top:-15px;
+	left:-5px;
+	border:1px solid black;
+} */
+#baby img{
+	/* width:20px;
+	height:20px; */
+	/* border:1px solid black; */
+	float:left;
+}
+#head_right{
+	color:#fff;
+	float:right;
+	/* border:1px solid purple;  */
+	/* padding-top:10px; */
+}
+#head_right a{
+	color:#fff;
+	font-size:15px;
+	font-weight:bold;
+	line-height:35px;
+}
+#main{
+	background:#fcfafd;
+	width:100%;
+	overflow:hidden;
+}
+#body{
+	width:960px;
+	overflow:hidden;
+	margin:0 auto;
+}
+#body_top{
+	margin:10px 0;
+	font-size:13px;
+}
+#body_top a{
+	color:#845561;
+	font-size:13px;
+	
+}
+#body_top a:hover{
+	color:#f10582;
+}
+#b_t1_left{
+	float:left;
+}
+#b_t1_right{
+	float:left;
+	margin-left:50px;
+	width:423px;
+}
+
+#style{
+	font-size:13px;
+	color:#90869b;
+}
+#b_t1_name{
+	font-weight:bold;
+	border-bottom:1px dashed #90869b;
+	color:#4e4e4e;
+}
+#b_t_left2{
+	float:left;
+}
+#b_t1_price{
+	color:#f34399;
+	font-size:35px;
+	margin-top:20px;
+	float:left;
+}
+#b_t1_zhe{
+	width:45px;
+	padding-left:2px;
+	margin-top:35px;
+	color:#fff;
+	background:#808080;
+	float:left;
+	border-radius:3px;
+	margin-left:10px;
+}
+#b_t1_old{
+	margin-top:35px;
+	color:#4e4e4e;
+	margin-left:10px;
+	text-decoration:line-through;
+	float:left;
+}
+#b_t1_r_1{
+	background:#f43499;
+	color:#fff;
+	border-radius:3px;
+	width:40px;
+	padding-left:4px;
+	float:left;
+}
+#b_t1_r_2{
+	background:#FDE5EB;
+	color:#f43499;
+	float:left;
+}
+#yunfei{
+	color:#808080;
+	float:left;
+}
+#b_t1_right2{
+	padding-top:50px;
+}
+#free{
+	color:#fff;
+	background:#f43499;
+	float:left;
+	margin-left:20px;
+}
+#b_t1_right3{
+	padding-top:30px;
+}
+#free288{
+	margin-left:20px;
+	float:left;
+	
+}
+#b_t1_right4{
+	padding-top:30px;
+}
+#count{
+	color:#808080;
+	float:left;
+}
+#num{
+	float:left;
+}
+#join{
+	margin-top:100px;
+	width:180px;
+	height:50px;
+	background:url(/images/home/details/15.png) 0px -195px;
+	/* border:1px solid black; */
+}
+
+#foot{
+	margin:15px;
+	background:#fcfcfc;
+	border-bottom:1px solid #ebebeb;
+	border-top:1px solid #ebebeb;
+}
+#bottom{
+	width:960px;
+	overflow:hidden;
+	margin:15px auto;
+	
+	
+}
+.footer{
+	font-size:12px;
+	float:left;
+	border-right:1px solid #b3b3b3;
+}
+.footer{
+	width:150px;
+	line-height:20px;
+	padding-left:15px;
+	height:138px;
+}
+#foot-bottom{
+	width:960px;
+	margin:0 auto;
+}
+.footer dl dd{
+	color:#808080;
+}
+#two{
+	overflow:hidden;
+	font-size:12px;
+	padding-left:15px;
+	/* border:1px solid red; */
+}
+
+

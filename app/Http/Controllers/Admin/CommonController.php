@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Session;
 class CommonController extends Controller {
 
     /**
@@ -14,19 +14,15 @@ class CommonController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function __construct() {
-       
-  
-       
-    
-//        if (!Session::has("userData")) {
-//            return redirect("/login");
-//            header("Location:/login");
-//            exit;
-//        }
+
+        if (!Session::has("userData")) {
+            header("Location:/Admin/login");
+            exit;
+        }
     }
 
     public function mod_id() {
-   
+        
     }
 
 }

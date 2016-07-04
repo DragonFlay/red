@@ -16,7 +16,7 @@ class IndexController extends CommonController
      */
     public function index()
     {
-        return view("home.index.index");
+        return view("home.index");
     }
 
     /**
