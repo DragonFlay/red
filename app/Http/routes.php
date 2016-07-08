@@ -10,14 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get("/",function(){
-    return view("home.index");
-});
-
-Route::get("/index",function(){
-    return view("admin.index");
-});
-
 
 //后台
 Route::get("/Admin", "Admin\IndexController@index");
@@ -44,15 +36,50 @@ Route::get("/Admin/bottom",function(){//后台底部
 Route::get("/Admin/welcome",function(){
     return view("admin.welcome");
 });
+//基本设置
+Route::get("/Admin/auth/adminSelf","Admin\Controller@adminSelf");//个人中心
+Route::get("/Admin/aSelf",function(){
+    return view("admin.auth.adminSelf");
+});
+Route::post("/Admin/auth/adminAvartar","Admin\Controller@adminAvartar");
 
 //用户模块
 Route::get("/Admin/user/list","Admin\UserController@userList");//用户列表
 Route::get("/Admin/useradd","Admin\UserController@userAdd");//用户添加
 //权限模块（管理员）
-Route::get("/Admin/auth/list","Admin\AdminController@adminList");//管理员列表
-Route::get("/Admin/auth/adminDdd","Admin\AdminController@adminAdd");//管理员添加
+
+Route::get("/Admin/auth/ruleList","Admin\AdminController@ruleList");//规则列表
+Route::post("/Admin/auth/ruleAdd","Admin\AdminController@ruleAdd");//添加规则
+Route::get("/Admin/auth/rAdd",function(){
+    return view("admin.auth.ruleAdd");
+});
+Route::get("/Admin/auth/ruleDel/{id}","Admin\AdminController@ruleDel");
+Route::post("/Admin/auth/ruleEdit/{id}","Admin\AdminController@ruleEdit");//编辑规则
+Route::get("/Admin/auth/rEdit/{id}","Admin\AdminController@rEdit");
+
+
+
+
+
+Route::get("/Admin/auth/groupList","Admin\AdminController@groupList");//组列表
+Route::post("/Admin/auth/groupEdit/{gid}","Admin\AdminController@groupEdit");//组编辑
+Route::get("/Admin/auth/gEdit/{gid}","Admin\AdminController@gEdit");//
+Route::post("/Admin/auth/groupAdd","Admin\AdminController@groupAdd");//添加组
+Route::get("/Admin/auth/gAdd/","Admin\AdminController@gAdd");
+Route::post("/Admin/auth/setAuth","Admin\AdminController@setAuth");//组权限更改
+
+
+
+Route::get("/Admin/auth/adminList","Admin\AdminController@adminList");//管理员列表
+
+Route::post("/Admin/auth/adminAdd","Admin\AdminController@adminAdd");//管理员添加
+Route::get("/Admin/auth/aAdd","Admin\AdminController@aAdd");
+Route::post("/Admin/auth/adminEdit","Admin\AdminController@adminEdit");//管理员编辑
+Route::get("/Admin/auth/aEdit/{id}","Admin\AdminController@aEdit");
+Route::any("/Admin/auth/setAdminGroup","Admin\AdminController@setAdminGroup");//修改管理员分组
+
 Route::post("/Admin/auth/adminDel","Admin\AdminController@adminDel");//管理员删除
-Route::post("/Admin/auth/setGroup","Admin\AdminController@setGroup");//管理员分组
+//管理员分组
 Route::post("/Admin/auth/adminLock","Admin\AdminController@adminLock");//管理员锁定
 
 

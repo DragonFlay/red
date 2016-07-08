@@ -2,6 +2,7 @@
 $(function () {
 	$("#main-tab select").change(function () {
 		//询问是否确定修改
+//                alert($(this).val());
 		var result = confirm("确定修改分组权限吗？");
 		if (result == false) {
 			location.reload();
@@ -10,7 +11,7 @@ $(function () {
 		//修改分组
 		$.ajax({
 			type : "post",
-			url : "/Admin/auth/setGroup",
+			url : "/Admin/auth/setAdminGroup",
 			data :  "gid=" + $(this).val() + "&uid=" + $(this).attr("uid"),
 			dataType: "json",
 			success : function (result) {

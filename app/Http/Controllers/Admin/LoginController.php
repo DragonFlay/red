@@ -56,7 +56,7 @@ class LoginController extends Controller
 		{
 			$request->flash();
 			return back()->with(["info" => "账号不存在"]);
-		} else if ( $data["password"] !=$userRec->password)
+		} else if (!Hash::check( $data["password"],$userRec->password))
 		{
 			$request->flash();
 			return back()->with(["info" => "密码不正确"]);
@@ -68,8 +68,9 @@ class LoginController extends Controller
 	}
     public function logout()
     {
+           
         Session::forget("userData");
-        return redirect("/Admin");
+        return redirect("/Admin/login");
        
     }
 }

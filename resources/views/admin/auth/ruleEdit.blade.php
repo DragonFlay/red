@@ -43,75 +43,82 @@ th{text-align:center;}
 <!--main_top-->
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
-    <td width="99%" align="left" valign="top">您的位置：权限管理</td>
+    <td width="99%" align="left" valign="top">您的位置：权限管理 -> 规则列表 -> 编辑规则
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='red'>
+     @if(count($errors)>0)
+        {{$errors->first()}}
+     @endif
+           {{session("info")}}
+         </font></td>
+    </td>
   </tr>
   <tr>
     <td align="left" valign="top">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="search">
   		<tr>
-   		 <td width="90%" align="left" valign="middle">
-	         
-         </td>
-  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">新增管理员</a></td>
+   		
+  		  <td width="100%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="{{$_SERVER['HTTP_REFERER']}}" target="mainFrame" onFocus="this.blur()" class="add">返回上一页</a></td>
   		</tr>
-                <form method="get" action="{{'/Admin/auth/list'}}">
-	         <span>管理员：</span>
-                 
-                 <input type="text" name="keyword" value="{{$keyword or ''}}" placeholder="用户名" class="text-word">
-	         <input name="" type="submit" value="查询" class="text-but">
-                     
-	         </form>
+               
 	</table>
     </td>
   </tr>
   <tr>
     <td align="left" valign="top">
-    
+        <form method='post' action="{{'/Admin/auth/ruleEdit/'.$rule->id}}">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
-      <tr>
-       
-        <th align="center" valign="middle" class="borderright">ID</th>
-        <th align="center" valign="middle" class="borderright">帐号</th>
-        <th align="center" valign="middle" class="borderright">权限</th>
-     
-        <th align="center" valign="middle" class="borderright">状态</th>
-        <th align="center" valign="middle" class="borderright">所属分组</th>
-        <th align="center" valign="middle">操作</th>
-      </tr>
-      @foreach($admin as $value)
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="center" valign="middle" class="borderright borderbottom">{{$value->admin_id}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{$value->username}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">创始人</td>
-        <td align="center" valign="middle" class="borderright borderbottom">
-          {{$value->is_lock}}
-        </td>
-        <td align="center" valign="middle" class="borderright borderbottom">
-            <select name='gid' uid="{{$value->admin_id}}">
-                @foreach($groups as $group)
-                    @if($value->gid==$group->gid)
-                    <option value="{{$group->gid}}"  selected>{{$group->title}}</option>
-                    @else
-                    <option value="{{$group->gid}}">{{$group->title}}</option>
-                    @endif
-                @endforeach
-            </select>
-        </td>
-        <td align="center" valign="middle" class="borderbottom"><a href="" target="mainFrame" onFocus="this.blur()" class="add">查看编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="" target="mainFrame" onFocus="this.blur()" uid="{{$value->admin_id}}" class="lock">
-            @if($value->is_lock=="正常")
-                锁定
-            @else
-                解锁
-            @endif
-            </a><span class="gray">&nbsp;|&nbsp;</span><a href="" target="mainFrame" onFocus="this.blur()" uid="{{$value->admin_id}}" class="del">删除</a></td>
-      </tr>
-     @endforeach
       
-    </table> <p>{!!$admin->appends(['keyword'=>$keyword])->render()!!}</p>
-    </td>
-    </tr>
+      <!--foreach($admin as $value)-->
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+  
+   
+        <td align="center" width='5%' valign="middle" class="borderright borderbottom">名称：</td>
+        <td  width='95%' valign="middle" class="borderright borderbottom">
+             <input size="50"type='text' name="title" value="{{$rule->title}}"/>
+            
+        </td>
+       
+
+            
+      </tr>
+       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+       
+   
+        <td align="center" width='5%' valign="middle" class="borderright borderbottom">规则：</td>
+        <td  width='95%'valign="middle" class="borderright borderbottom">
+           <input size="50"type='text' name="name" value="{{$rule->name}}"/>
+            
+            
+        </td>
+      </tr>
+     <!--endforeach-->
+      </tr>
+        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td  align="center" width='5%' valign="middle" class="borderright borderbottom">状态：</td>
+        <td  width='95%' valign="middle" class="borderright borderbottom">
+               &nbsp;&nbsp;<input type="radio" id="xx" name="status" value='1' @if($rule->status==1) checked @endif/><label for='xx'>启用</label>&nbsp;
+             
+           &nbsp; <input type="radio" id="yy" name="status" value='0' @if($rule->status==0) checked @endif /><label for='yy'>禁用</label>
+        </td>
+  
+          
+      </tr>
+      
+       </tr>
+        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td  align="center" width='5%' valign="middle" class="borderright borderbottom"></td>
+        <td   class="borderright borderbottom">    
+            <input type="hidden" name="_token" value="{{csrf_token()}}" />
+           <input type="submit" style="width:100px" value=" 保存 "/>{{session('info')}}
+        </td>
+  
+          
+      </tr>
+    </table> 
+        </form>
+    
     
 </table>
-<script src="{{asset("/js/admin/admin_index.js")}}"></script>
+
 </body>
 </html>

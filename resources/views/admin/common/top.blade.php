@@ -33,9 +33,9 @@
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td align="left" valign="top" id="header-admin">后台管理系统</td>
-        <td align="left" valign="bottom" id="header-menu">
-        <a href="{{'/Admin'}}" target="#" onFocus="this.blur()" id="menuon">后台首页</a>
-        <a href="leftaaa.html" target="leftFrame" onFocus="this.blur()">用户管理</a>
+        <td align="{{'/Admin/welcome'}}" target="mainFrame" valign="bottom" id="header-menu">
+        <a href="" target="" onFocus="this.blur()" id="menuon">后台首页</a>
+        <a href="{{'/Admin/aSelf'}}" target="mainFrame" onFocus="this.blur()">个人中心</a>
         <a href="lanmu.html" target="left" onFocus="this.blur()">栏目管理</a>
         <a href="xcxi.html" target="left" onFocus="this.blur()">信息管理</a>
         <a href="liuyan.html" target="left" onFocus="this.blur()">留言管理</a>
