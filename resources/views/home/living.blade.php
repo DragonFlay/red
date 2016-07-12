@@ -26,9 +26,9 @@
                             <li><a href="">联名卡申请</a></li>
                             <li><a href="">唯品卡</a></li>
                             <li><a>|</a></li>
-                            <li><a href="">我的收藏夹</a></li>
-                            <li><a href="">我的订单</a></li>
-                            <li><a href="">登录</a></li>
+                            <li><a href="/Home/favorites">我的收藏夹</a></li>
+                            <li><a href="/Home/indent">我的订单</a></li>
+                            <li><a href="/Home/login">登录</a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,8 +45,7 @@
                 <span id="shopbag">
                     <div id="bag">
                     </div>
-                    <div id="shop">购物袋(<a id="num">0</a>)
-                    </div>
+                    <a id="num" href="/Home/shopbag"><div id="shop">购物袋(0)</div></a>
             </div>
         </span>
     </div>
@@ -57,7 +56,7 @@
 <div id="body_head">
     <div id="head_left">
         <ul>
-            <li><a id="first" href="">首页</a></li>
+            <li><a id="first" href="/">首页</a></li>
             <li><a href="">美妆</a></li>
             <li><a id="baby" href=""><img src="/images/home/living/1.gif"/>母婴</a></li>
             <li><a href="">居家</a></li>

@@ -44,23 +44,23 @@ body{overflow-x:hidden; background:url(/images/admin/common/leftbg.jpg) left top
         <span>会员管理</span>
         <a href="main.html" target="mainFrame" onFocus="this.blur()">评论管理</a>
         <a href="main_list.html" target="mainFrame" onFocus="this.blur()">会员等级</a>
-        <a href="{{'/Admin/user/list'}}" target="mainFrame" onFocus="this.blur()">会员列表</a>
+        <a href="{{'/Admin/user/userList'}}" target="mainFrame" onFocus="this.blur()">会员列表</a>
       </div>
       <div>
         <span>商品管理</span>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">商品分类</a>
-         <a href="main.html" target="mainFrame" onFocus="this.blur()">商品列表</a>
+        <a href="{{'/Admin/category/catelist'}}" target="mainFrame" onFocus="this.blur()">商品分类</a>
+         <a href="{{"/Admin/goods/goodslist"}}" target="mainFrame" onFocus="this.blur()">商品列表</a>
         <a href="main_list.html" target="mainFrame" onFocus="this.blur()">商品类型</a>
-        <a href="main_info.html" target="mainFrame" onFocus="this.blur()">商品规格</a>
+        <a href="/Admin/goods/standlist" target="mainFrame" onFocus="this.blur()">商品规格</a>
         <a href="main.html" target="mainFrame" onFocus="this.blur()">商品属性</a>
         <a href="main.html" target="mainFrame" onFocus="this.blur()">商品品牌</a>
       </div>
        
        <div>
         <span>订单管理</span>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">订单列表</a>
-        <a href="main_list.html" target="mainFrame" onFocus="this.blur()">发货单列表</a>
-        <a href="main_info.html" target="mainFrame" onFocus="this.blur()">退货单列表</a>
+        <a href="{{'/Admin/order/orderlist'}}" target="mainFrame" onFocus="this.blur()">订单列表</a>
+        <a href="{{'/Admin/order/deliverlist'}}" target="mainFrame" onFocus="this.blur()">发货单列表</a>
+        <a href="{{'/Admin/order/returnlist'}}" target="mainFrame" onFocus="this.blur()">退货单列表</a>
         <!--<a href="main.html" target="mainFrame" onFocus="this.blur()">自定义权限</a>-->
       </div>
       

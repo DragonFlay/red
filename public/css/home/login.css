@@ -90,11 +90,11 @@
 	padding-right:-100px;
 }
 #denglu{
-	height:40px;
+/*	height:40px;
 	width:150px;
 	background:url(/images/home/login/1.png);
         background-position: -151px -171px;
-	margin-top:15px;
+	margin-top:15px;*/
 }
 #forget{
 	float:right;
@@ -103,4 +103,10 @@
 }
 #free{
 	color:#f10180;
+}
+#errors{
+	color: red;
+}
+#jiao{
+    margin-left: 385px;  
 }

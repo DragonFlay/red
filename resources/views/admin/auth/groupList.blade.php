@@ -76,22 +76,22 @@ th{text-align:center;}
         <td align="center" valign="middle" class="borderright borderbottom">{{$group->gid}}</td>
    
         <td align="center" valign="middle" class="borderright borderbottom">{{$group->title}}</td>
-        <td align="center" valign="middle" class="borderright borderbottom">
+        <td  valign="middle" class="borderright borderbottom">
             @foreach($rules as $col=>$rule)
-            @if($col %7 ==0)<p>@endif
+            @if($col %12 ==0)<p>@endif
                 @if(in_array($rule->id,explode(",",$group->rules)))
                 <input type="checkbox" name="ruleid[]" value="{{$rule->id}}" group="{{$group->gid}}" id="i{{$row.$col}}" checked /><label for="i{{$row.$col}}">{{$rule->title}}</label>
                  @else
                   <input type="checkbox" name="ruleid[]" value="{{$rule->id}}" group="{{$group->gid}}" id="i{{$row.$col}}"  /><label for="i{{$row.$col}}">{{$rule->title}}</label>
                   @endif  
-            @if($col % 7== 6)</p>@endif
+            @if($col % 12== 11)</p>@endif
              @endforeach
         </td>
        
         <td align="center" valign="middle" class="borderbottom">
        <a href="/Admin/auth/gEdit/{{$group->gid}}"  target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span>
     
-       <a href="" target="mainFrame" onFocus="this.blur()"  class="del">删除</a></td>
+       <a href="/Admin/auth/groupDel/{{$group->gid}}" target="mainFrame" onFocus="this.blur()"  class="del">删除</a></td>
       </tr>
      @endforeach
       

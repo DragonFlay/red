@@ -98,7 +98,7 @@ th{text-align:center;}
                 @endforeach
             </select>
         </td>
-        <td align="center" valign="middle" class="borderbottom"><a href="/Admin/auth/aEdit/{{$value->admin_id}}"  target="mainFrame" onFocus="this.blur()" class="add">查看编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="" target="mainFrame" onFocus="this.blur()" uid="{{$value->admin_id}}" class="lock">
+        <td align="center" valign="middle" class="borderbottom"><a href="/Admin/auth/adminShow/{{$value->admin_id}}"  target="mainFrame" onFocus="this.blur()" class="add">查看</a><span class="gray">&nbsp;|&nbsp;</span><a href="/Admin/auth/aEdit/{{$value->admin_id}}"  target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="" target="mainFrame" onFocus="this.blur()" uid="{{$value->admin_id}}" class="lock">
             @if($value->is_lock=="正常")
                 锁定
             @else

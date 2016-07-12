@@ -1,58 +1,119 @@
-		/*头部设置*/
 *{
+	margin:0;
+	padding:0;
 	text-decoration:none;
+	list-style-type:none;
 }
-#tou{
-	width:100%;
-	height:100px;
-	 /*border:1px solid red;*/ 
+.c{
+	clear:both;
 }
- .tou1{
-	float:left;
-	display:block;
-}
-.jin{
-	position:relative;
-	top:-9px;
-}
-.tou2{
-	float:right;
-	display:block;
-	
-}
-.tou2-t{
-	 /*border:1px solid green;*/ 
-	height:50px;
+#top{
 	width:1000px;
+	overflow:hidden;
+	margin:0 auto;
+	margin-top:15px;
+}
+#top-left{
+	width:130px;
+	height:60px;
+	background:url(/images/home/shopbag/1.png) -456px -141px;
+	float:left;
+}
+#top-{
+	overflow:hidden;
+}
+#t-r-t{
+	/* border:1px solid grey; */
 	float:right;
-
 }
-.tou2-t>ul{
-	
-
-	
-}
-.tou2-t>ul>li{
-
+#t-r-t ul li{
 	float:left;
-	display:block;
-} 
-.tou2-b{
-	
-	 /*border:1px solid blue;*/ 
-	height:50px;
-	width:1000px;
-	
+	padding-right:10px;
 }
-.tou2-b>ul{
-	
-	margin-left:220px;
+#vip{
+	display:inline-block;
+	width:18px;
+	height:25px;
+	background:url(/images/home/shopbag/2.png) -8px -26px;
+	/* border:1px solid red; */
 }
-.tou2-b>ul>li{
+#tel{
+	margin-top:5px;
+	width:15px;
+	height:15px;
+	display:inline-block;
+	background:url(/images/home/shopbag/1.png) -567px -237px;
+	/* border:1px solid black; */
+}
+#server{
+	width:15px;
+	height:20px;
+	display:inline-block;
+	background:url(/images/home/shopbag/1.png) -405px -345px;
+}
+#down{
+	margin-top:7px;
+	width:15px;
+	height:20px;
+	display:inline-block;
+	background:url(/images/home/shopbag/1.png) -592px -327px
+}
+#people{
+	margin-top:4px;
+	width:15px;
+	height:20px;
+	display:inline-block;
+	background:url(/images/home/shopbag/1.png) -573px -254px;
+}
+#t-r-t ul li a{
+	color:#908090;
+	font-size:14px;
+}
+#t-r-b{
+	margin-top:-25px;
+	float:right;
+	overflow:hidden;
+	/* border:1px solid purple; */
+}
+#t-r-b ul li{
 	float:left;
-	display:block;
-	margin:10px;
+	font-size:14px;
+	padding-right:15px;
 	
+
+}
+#t-r-b ul li a{
+	color:#908090;
+}
+#bzh{
+	display:inline-block;
+	width:22px;
+	height:21px;
+	background:url(1.png) -306px -255px
+}
+.dd{
+    	height:40px;
+	width:25%;
+}
+.sp{
+    padding-bottom: 15px;
+}
+#seven{
+	display:inline-block;
+	width:22px;
+	height:21px;
+	background:url(/images/home/shopbag/1.png) -330px -255px
+}
+#tui{
+	display:inline-block;
+	width:22px;
+	height:21px;
+	background:url(/images/home/shopbag/1.png) -355px -255px
+}
+hr{
+	margin:5px;
+	color:#f3168a;
+	/*border:1px solid #f3168a;*/
 } 
 .a{
 	clear:both;
@@ -60,7 +121,7 @@
 .xian{
 	width:100%;
 	height:1px;
-	 /*border:2px solid red;*/ 
+	/*border:1px solid red;*/ 
 	float:left;
 	margin-top:10px;
 	background:red;
@@ -69,20 +130,21 @@
 	height:110px;
 	width:100%;
 	margin-left:150px;
-	 border:1px solid red; 
+	/*border:1px solid red;*/ 
 	
 }
 .dingdan{
-	height:500px;
-	width:80%;
-	border:1px solid #F0E0E4;
+	height:80px;
+	width:1000px;
+	/*border:1px solid #F0E0E4;*/
 	margin-top:10px;
 }
 .dingdan1{
 	height:20px;
-	width:100%;
+	width:1000px;
 	/*border:1px solid red;*/
 	background:#F5F5F5;
+        padding-bottom: 20px;
 }
 .dingdantu{
 	margin-bottom:3px;
@@ -90,7 +152,7 @@
 }
 .dingdan2{
 	height:100px;
-	width:100%;
+	width:1000px;
 	/*border:1px solid #F0E0E4;*/
 }
 .dingdan2-1{
@@ -124,6 +186,14 @@
 	float:left;
 }
 .xiatu{
+        width:1000px;
 	margin:60px;
 	margin-left:200px;
+}
+
+#liucheng{
+	width:1000px;
+	height:200px;
+	margin:35px auto;
+	/* border:1px solid red; */
 }

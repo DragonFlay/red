@@ -61,9 +61,11 @@
 }
 #b{
 	height:30px;
+        width:130px;
 }
+
 #button{
-	vertical-align:center;
+	/*vertical-align:center;*/
 	background:#dc0787;
 	width:100px;
 	height:40px;
@@ -84,4 +86,15 @@
 	font-size:12px;
 	/* border:1px solid red; */
 	padding-right:-100px;
+}
+#zd{
+    color: pink;
+}
+#zd a{
+    color: pink;
+}#errors{
+	color: red;
+}
+#jiao{
+    margin-left: 385px;  
 }

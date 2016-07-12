@@ -80,8 +80,8 @@ th{text-align:center;}
         <td align="center" valign="middle" class="borderright borderbottom">{{$rule->name}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$rule->title}}</td>
        <td align="center" valign="middle" class="borderright borderbottom">
-           <input type="radio" name="status/{{$rule->id}}" id="status/{{$rule->id}}/1" @if($rule->status == 1) checked @endif/><label for="status/{{$rule->id}}/1">启用</label>
-           <input type="radio" name="status/{{$rule->id}}" id="status/{{$rule->id}}/1" @if($rule->status == 0) checked @endif /><label for="status/{{$rule->id}}/0">禁用</label>
+           <input type="radio" name="{{$rule->id}}" value="1" rid="{{$rule->id}}" id="status/{{$rule->id}}/1" @if($rule->status == 1) checked @endif/><label for="status/{{$rule->id}}/1">启用</label>
+           <input type="radio" name="{{$rule->id}}" value="0" rid="{{$rule->id}}" id="status/{{$rule->id}}/0" @if($rule->status == 0) checked @endif /><label for="status/{{$rule->id}}/0">禁用</label>
         </td>
         <td align="center" valign="middle" class="borderbottom">
        <a href="/Admin/auth/rEdit/{{$rule->id}}"  target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span>
@@ -95,6 +95,6 @@ th{text-align:center;}
     </tr>
     
 </table>
-
+<script src="{{asset('/js/admin/rule_index.js')}}"></script>
 </body>
 </html>

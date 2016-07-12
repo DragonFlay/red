@@ -10,7 +10,7 @@
 #head_top{
 	background:url(/images/home/index/1.jpg) no-repeat scroll center top;
 	overflow:hidden;
-	height:80;
+	height:80px;
 	text-align:center;
 }
 #head_center{
@@ -72,23 +72,21 @@
 	height:37px;
 	background:url(/images/home/index/16.png) no-repeat -43px -130px;
 	display:inline-block;
+        margin-top: -3px;
 }
 #shopbag{
 	height:35px;
 	display:inline-block;
 	border:1px solid #f10582;
-	margin-left:10px;
+	margin-left: 10px;
+        margin-bottom: 10px; 
 }
 #shop{
 	margin-top:5px;
 	float:right;
 	margin-right:20px;
-	
-	
 }
-a{
-	color:#f73580;
-}
+
 #body_head{
 	height:35px;
 	background-color:#f10582;
@@ -146,12 +144,13 @@ a{
 	line-height:35px;
 }
 #body_top{
-	clear:both; 
-	background:url(/images/home/index/a.jpg) no-repeat scroll  center  top;
-	overflow:hidden;
-	height:270;
-	text-align:center;
-}
+            clear:both; 
+            background:url(/images/home/index/a.jpg) no-repeat scroll  center  top;
+            overflow:hidden;
+            height:270px;
+            text-align:center;
+        }
+
 #body{
 	/* background-image:url(20.jpg) /* scroll center,url(19.jpg) scroll center */
 	background-color:#d4e6ea;
@@ -188,17 +187,17 @@ a{
 	/* border:1px solid black; */
 }
 span{
-	padding-top:px;
+	padding-top:5px;
 	padding-right:13.5px;
 }
 
 #foot-head{ 
 	background:url(/images/home/index/19.jpg) no-repeat scroll  center  top;
-	height:482;
+	height:482px;
 	width:100%;
 	text-align:center;
 	}
-	#foot{
+#foot{
 	width:100%;
 	margin-top:15px;
 	background:#fcfcfc;
@@ -236,5 +235,11 @@ span{
 	padding-left:15px;
 	/* border:1px solid red; */
 }
-
+#keywords{
+    height: 30px;
+}
+#sousuo{
+    width: 50px;
+    height: 32px;
+}
 

@@ -1,20 +1,23 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>家居专场</title>
+        <title>唯品会-商品详情</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="/css/home/details.css">
     </head>
     <body>
         <!-- head top -->
         <div id="head">
+            <div id="head_top">
+             <img src="/images/home/details/1_1.jpg"> 
+            </div>
             <div id="head_center">
                 <div id="h_c_content">
                     <div id="contentl">
-                        <div id="bj">北京	
+                        <div id="bj">北京
                         </div>
-                        <div id="bj-pic">
-                        </div>
+<!--                        <div id="bj-pic">
+                        </div>-->
                     </div>
                     <div id="contentr">
                         <ul>
@@ -26,9 +29,9 @@
                             <li><a href="">联名卡申请</a></li>
                             <li><a href="">唯品卡</a></li>
                             <li><a>|</a></li>
-                            <li><a href="">我的收藏夹</a></li>
-                            <li><a href="">我的订单</a></li>
-                            <li><a href="">登录</a></li>
+                            <li><a href="/Home/favorites">我的收藏夹</a></li>
+                            <li><a href="/Home/indent">我的订单</a></li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>
@@ -36,62 +39,64 @@
             <div class="c"></div>
             <div id="head_bottom">
                 <span id="h_b_left">
-                    <img src="/images/home/details/3.png"/>
+                    <img src="/images/home/index/4.png"/>
                 </span>
                 <div id="h_b_right"/>
-                <img src="/images/home/details/5.png"/>
-                <img src="/images/home/details/6.png"/>
-                <img src="/images/home/details/7.png"/>
+                <img src="/images/home/index/5.png"/>
+                <img src="/images/home/index/6.png"/>
+                <img src="/images/home/index/7.png"/>
                 <span id="shopbag">
-                    <div id="bag">
-                    </div>
-                    <div id="shop">购物袋(<a id="num">0</a>)
-                    </div>
+                    <div id="bag"></div>
+                    <a href="/Home/shopbag"><div id="shop">购物袋(0)</div></a>
+                </span>
             </div>
-        </span>
-    </div>
-</div>
-<div class="c"></div>
-<!-- shopbody  -->
-<!-- body head -->
-<div id="body_head">
-    <div id="head_left">
-        <ul>
-            <li><a id="first" href="">首页</a></li>
-            <li><a href="">美妆</a></li>
-            <li><a id="baby" href=""><img src="/images/home/details/1.gif"/>母婴</a></li>
-            <li><a href="">居家</a></li>
-            <li><a href="">美妆</a></li>
-            <li><a href="">居家</a></li>
-            <li><a href="">男士</a></li>
-            <li><a href="">旅行</a></li>
-            <li><a href="">全球特卖</a></li>
-            <li><a href="">明天上线</a></li>
-        </ul>
+        </div>
+        <div class="c"></div>
+        <!-- shopbody  -->
+        <!-- body head -->
+        <div id="body_head">
+            <div id="head_left">
+                <ul>
+                    <li><a id="first" href="/">首页</a></li>
+                    <li><a href="">美妆</a></li>
+                    <li><a id="baby" href=""><img src="/images/home/index/7.gif"/>母婴</a></li>
+                    <li><a href="">居家</a></li>
+                    <li><a href="/Home/dress">女装</a></li>
+                    <li><a href="/Home/living">居家</a></li>
+                    <li><a href="">男士</a></li>
+                    <li><a href="">旅行</a></li>
+                    <li><a href="">全球特卖</a></li>
+                    <li><a href="">明天上线</a></li>
+                </ul>
 
-        <div id="head_right">
-            <a href="">在售分类</a>
+                <div id="head_right">
+                    <a href="">在售分类</a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+        
+        
 <div class="c" id="main">
     <div id="body">
+        @foreach($deta as $key=>$xiang)
         <div id="body_top">
-            <span><a class="p" href="">首页&nbsp;></a></span>
-            <span><a class="p" href="">静风格stylejing饰品专场&nbsp;></a></span>
-            <span>施华洛元素天然水晶手链</span>
+            <span><a class="p" href="/">首页&nbsp;></a></span>
+            <span><a class="p" href="">{{$xiang->cname}}></a></span>
+            <span>{{$xiang->name}}</span>
         </div>
+        
         <div id="body_t1">
             <div id="b_t1_left">
                 <div><img src="/images/home/details/1.jpg"/></div>
 
             </div>
             <div id="b_t1_right">
-                <div id="style">静风格</div>
-                <div id="b_t1_name">施华洛元素天然水晶手链</div>
-                <div id="b_t1_price">&yen;327</div>
-                <div id="b_t1_zhe">6.2折</div>
-                <div id="b_t1_old">&yen;529</div>
+                <div id="style">{{$xiang->cname}}</div>
+                <div id="b_t1_name">{{$xiang->name}}</div>
+                <div id="b_t1_price">&yen;{{$xiang->price}}</div>
+                <div id="b_t1_zhe">折扣1</div>
+                <div id="b_t1_old">库存：{{$xiang->storeNum}}</div>
                 <div class="c" id="b_t1_right2">
                     <div id="b_t1_r_1">折扣</div>
                     <div id="b_t1_r_2">购物满2件即享9折，满3件即享8.8折</div>
@@ -113,6 +118,7 @@
             </div>
 
         </div>
+        @endforeach
         <div class="c" id="b_t_left2">
             <span><img src="/images/home/details/a.jpg" width="60px" height="78px"></span>
             <span><img src="/images/home/details/b.jpg" width="60px" height="78px"></span>

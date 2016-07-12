@@ -25,7 +25,7 @@ class AdminController extends CommonController {
         $admin = DB::table("admin")
                 ->leftJoin("admin_group", "admin.admin_id", "=", "admin_group.uid")
                 ->where("admin.username", "like", '%' . $request->get('keyword') . '%')
-                ->paginate(2);
+                ->paginate(5);
 //       dd($admin);
         $groups = DB::table("admin_auth")->get();
 
@@ -164,13 +164,44 @@ class AdminController extends CommonController {
     
            
    }
+   public function aSelf()
+   {
+        $group = DB::table("admin_group")
+               ->join("admin_auth","admin_group.gid","=","admin_auth.gid")
+               ->where("admin_group.uid",session("userData")->admin_id)
+               ->first();
+        $admin=DB::table("admin")->where("admin_id",session("userData")->admin_id)->first();
+         return view("admin.auth.adminSelf",compact("admin","group"));
+   }
    public function adminSelf()
    {
        
    }
-   public function adminAvartar()
+   public function adminShow($id)
    {
+       $group = DB::table("admin_group")
+               ->join("admin_auth","admin_group.gid","=","admin_auth.gid")
+               ->where("admin_group.uid",$id)
+               ->first();
+  
+       $admin=DB::table("admin")->where("admin_id",$id)->first();
        
+       return view("admin.auth.adminShow",compact("admin","group"));
+   }
+   public function adminAvartar(Request $request)
+   {
+       $avartar = $request->file("Filedata");
+       if (!$avartar->isValid()) {
+              return response()->json(array("status" => false, "info" => "不合法的上传"));
+        }
+        $suffix = $avartar->getClientOriginalExtension();
+        $rename = date("YmdHis") . rand(1000, 9999) . "." . $suffix;
+        $result = $avartar->move("/uploads/avartar", $rename);
+        $adminModel = new \App\Admin();
+        $admin=$adminModel->find($request->get("uid"));
+        $admin->avrartar = $rename;
+        $admin->save();
+          echo json_encode(array("status" => true, "info" => "/uploads/avartar/" . $rename));
    }
    
    
@@ -232,6 +263,18 @@ class AdminController extends CommonController {
         {
             return redirect("/Admin/auth/ruleList")->with(["info" => "删除失败"]);
         }
+   }
+   public function ruleLock(Request $request)
+   {
+        $affectRows=DB::table("admin_rule")->where("id",$request->get("id"))->update(["status"=>$request->get("status")]);
+        if($affectRows >0)
+        {
+             return response()->json(['status'=>1,'info'=>"修改成功"]);
+        }else{
+             return response()->json(['status'=>0,'info'=>"修改失败"]);
+        }
+         
+      
    }
      public function groupList()
    {
@@ -307,6 +350,16 @@ class AdminController extends CommonController {
             return redirect("/Admin/auth/groupList")->with(["info"=>"修改失败"]);
         }
        
+   }
+   public function groupDel($id)
+   {
+       if(false !==DB::table("admin_auth")->where("gid",$id)->delete())
+       {
+           return redirect("/Admin/auth/groupList")->with(["info"=>"删除成功"]);
+       }else
+       {
+            return redirect("/Admin/auth/groupList")->with(["info"=>"删除失败"]);
+       }
    }
    
 }

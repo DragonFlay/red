@@ -13,8 +13,8 @@
 	margin:-3px auto;
 }
 #h_c_content{
-			width:960px;
-			margin:0 auto;
+	width:960px;
+	margin:0 auto;
 }
 #contentl{
 	width:80px;
@@ -28,7 +28,7 @@
 	float:left;
 }
 #bj-pic{
-	background:url(1.png) -69px -20px;
+	background:url(/images/home/living/1.png) -69px -20px;
 	width:15px;
 	height:30px;
 	float:left;
@@ -64,7 +64,7 @@
 #bag{
 	width:37px;
 	height:37px;
-	background:url(16.png) no-repeat -43px -130px;
+	background:url(/images/home/living/16.png) no-repeat -43px -130px;
 	display:inline-block;
 }
 #shopbag{
@@ -144,11 +144,11 @@ a{
 	/* border:1px solid red; */
 }
 #body{
-	width:1000;
+	width:1000px;
 	
 	vertical-align:bottom;
 	border:0px none;
-	/* background:url(1.jpeg) no-repeat center scroll top; */
+	background:url(/images/home/living/1.jpeg) no-repeat center scroll; 
 }
 #main_body{
 	overflow:hidden;
@@ -181,7 +181,7 @@ a{
 #clock{
 	width:15px;
 	height:15px;
-	background:url(9.png) -199px -199px;
+	background:url(/images/home/living/9.png) -199px -199px;
 	margin-top:17px;
 }
 #kou{
@@ -204,28 +204,28 @@ a{
 	height:27px;
 }
 #tubiao1{
-	background:url(17.png) -270px -131px;
+	background:url(/images/home/living/17.png) -270px -131px;
 }
 #tubiao2{
-	background:url(17.png) -33px -131px;
+	background:url(/images/home/living/17.png) -33px -131px;
 }
 #tubiao3{
-	background:url(17.png) 0 -131px;
+	background:url(/images/home/living/17.png) 0 -131px;
 }
 #tubiao4{
-	background:url(17.png) -66px -131px;
+	background:url(/images/home/living/17.png) -66px -131px;
 }
 #tubiao1:hover{
-	background:url(17.png) -270px -175px;
+	background:url(/images/home/living/17.png) -270px -175px;
 }
 #tubiao2:hover{
-	background:url(17.png) -33px -175px;
+	background:url(/images/home/living/17.png) -33px -175px;
 }
 #tubiao3:hover{
-	background:url(17.png) 0 -175px;
+	background:url(/images/home/living/17.png) 0 -175px;
 }
 #tubiao4:hover{
-	background:url(17.png) -66px -175px;
+	background:url(/images/home/living/17.png) -66px -175px;
 } 
 #lzhe{
 	background:#ffedf7;

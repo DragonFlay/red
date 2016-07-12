@@ -1,20 +1,20 @@
+<!DOCTYPE HTML>
 <html>
     <head>
-        <title>唯品会-我的购物袋</title>
+        <title>唯品会-订单</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="/css/home/shopbag.css"/>
     </head>
     <body>
         <div id="top">
-            <div id="top-left">
-            </div>
+            <a href="/"><div id="top-left"></div></a>
             <div id="top-right">
                 <div id="t-r-t">
                     <ul>
-                        <li><a href="">你好，xxx</a></li>
+                        <li><a href="/Home/member">你好：{{Session("uData")->nickname}}</a></li>
                         <li><a id="vip" href=""></a></li>
-                        <li><a href="">[退出]</a></li>
-                        <li><a href="">订单管理</a></li>
+                        <li><a href="/Home/out">[退出]</a></li>
+                        <li><a href="/Home/indent">订单管理</a></li>
                         <li><a>|</a></li>
                         <li><a id="tel" href=""></a></li>
                         <li><a href="">400-6879-888</a></li>
@@ -41,6 +41,8 @@
             </div>
         </div>
         <hr class="c"/>
+
+
         <div id="liucheng">
             <div id="guodu1">
             </div>

@@ -42,7 +42,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
-     <a href="{{$_SERVER['HTTP_REFERER']}}" target="mainFrame" onFocus="this.blur()" class="add" onclick="">返回上一级</a> 
+     <a href="javascript:history.go(-1)" target="mainFrame" onFocus="this.blur()" class="add" >返回上一级</a> 
 	
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='red'>
          @if(count($errors) >0)
